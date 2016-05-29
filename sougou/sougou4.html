@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sougou3</title>
+	<style>
+	/*公共类  开始*/
+	.clearfix::after{
+		content:"";
+		width:0;
+		height:0;
+		font-size:0;
+		display:block;
+		clear:both;
+	}
+	.content ul li a{
+        text-decoration:none;
+        color:#696969;
+	}
+	.content ul li{
+        list-style-type:none;
+	}
+	.content .main_index ul li{
+		float:left;
+		margin-right:32px;
+	}
+	.content{
+		font-size:75%;
+		font-family:Tahoma, Arial;
+	}
+	/*公共类  结尾*/
+	body{
+		margin:0px;
+	}
+	/*头部样式  开始*/
+	.top{
+        width:1000px;
+        margin:8px auto -4px;
+        position:relative;
+    }
+    .top .logo{
+        width:193px;
+        height:40px;
+        float:left;
+    }
+    .top .search{
+        width:325px;
+        height:32px;
+        float:right;
+    }
+    .top .search #key{
+        width:293px;
+        height:25.5px;
+        border:1px solid #E1E1E1;
+        outline:none;
+        text-indent:10px;
+        float:left;
+    }
+    .top .search #key:focus{
+        border:1px solid #FC6B2D;
+    }
+    .top .search #ben{
+        float:left;
+        width:30px;
+        height:30px;
+        text-indent:-100px;
+        border:none;
+        outline:none;
+        background:url("http://dl.pinyin.sogou.com/index/header/search_box.png");
+        background-position:-295px 0;
+        margin-left:-2px;
+    }
+	/*头部样式  结束*/
+	/*导航菜单样式  开始*/
+	.menuH{
+        width:100%;
+        height:40px;
+        background-color:#FC6B2D;
+    } 
+    .menu{
+        width:1000px;
+        margin:20px auto;
+    } 
+    .menu li{
+        float:left;
+        list-style-type:none;
+        padding:9px 33px;
+        margin:0 50px 0 -18px;
+        position:relative; 
+    }
+    .menu li.SC,.menu li:hover{
+        background-color: #E94F0D;
+    }
+    .menu li a{
+        color:#fff;
+        text-decoration:none;
+        font-size:18px;
+    }
+    .menu li.new::after{
+        content:"";
+        width:26px;
+        height:14px;
+        background:url("http://dl.pinyin.sogou.com/index/2.0/new.png");
+        position:absolute;
+        top:-16px;
+        left:60px;
+    } 
+	/*导航菜单样式  结束*/
+	/*头部图样式  开始*/
+	.bennerContainer .benner{
+        width:1000px;
+        height:400px;
+        margin:0 auto;
+        background: url('http://dl.pinyin.sogou.com/index/2.0/banner_8.0.2.jpg') center;
+        position:relative;
+    }
+    .bennerContainer .benner .date{
+        position:absolute;
+        top:253px;
+        left:575px;
+        font-size:14px;
+        font-family:"微软雅黑","Arial";
+        color:#605F5F;
+    }
+    .bennerContainer .benner .version a{
+        position:absolute;
+        top:253px;
+        left:758px;
+        font-size:14px;
+        color:#5E8AED;
+    }
+    .bennerContainer .benner .support{
+        position:absolute;
+        top:275px;
+        left:575px;
+        color:#605F5F;
+    }
+    .bennerContainer .download a{
+        display:inline-block;
+        position:absolute;
+        width:241px;
+        height:60px;
+        background:url('http://dl.pinyin.sogou.com/index/2.0/btn_down_one_8.0.1.png');
+        top:306px;
+        left:575px;
+    }
+    .bennerContainer .download a:hover{
+        background-position:0 -60px;
+    }
+    .bennerContainer .qrcode{
+        position:absolute;
+        width:90px;
+        height:89px;
+        background:url('http://dl.pinyin.sogou.com/index/2.0/mobile_qrcode_7.7.png') no-repeat;
+        right:0px;
+        bottom:60px;
+    }
+    .bennerContainer .moliedownload a{
+        position:absolute;
+        width:90px;
+        height:22px;
+        background:url('http://dl.pinyin.sogou.com/index/2.0/btn_down_mobile_8.0.1.png') no-repeat;
+        right:0px;
+        bottom:35.4px;
+    }
+	/*头部图样式  结束*/
+	/*皮肤部分样式  开始*/
+	.content{
+		width:1000px;
+		margin:0 auto;
+	}
+	.content .main_index{
+		float:left;
+		width:734px;
+	}
+	.content .main_index .title_a{
+		width:734px;
+		height:29px;
+		background:url('http://dl.pinyin.sogou.com/index/2.0/side_title.png') no-repeat;
+	}
+	.content .main_index ul{
+		padding:0;
+		margin-top:0;
+	}
+	.content .main_index .skin li{
+		float:left;
+		list-style-type:none;
+		margin:0 34px 13px 0;
+		width:333px;
+		height:157px;
+		background:url('http://dl.pinyin.sogou.com/index/2.0/skin_border.png') no-repeat;
+	}
+	.content .main_index li .img img{
+		width:320px;
+		height:110px;
+		margin:7px 6px 0;
+	}
+	.content .main_index li .info{
+		width:333px;
+		height:27px;
+		margin-top:13px;
+	}
+	.content .main_index li .skin_content a:hover{
+		color:#ff8049;
+	}
+	.content .main_index li .skin_download a{
+		width:72px;
+		height:25px;
+		float: left;
+        margin: -17px 0 0px 260px;
+	}
+	.content .main_index li .skin_download a:hover{
+		background:url('http://dl.pinyin.sogou.com/index/2.0/skin_download_hover.png') no-repeat;
+	}
+	/*皮肤部分样式 结束*/
+	/*扩展部分样式 开始*/
+	.content .main_index .title_b{
+		width:734px;
+		height:29px;
+		background:url('http://dl.pinyin.sogou.com/index/2.0/ex_func_title.png') no-repeat;
+		margin:-14px 0 10px 0;
+	}
+	.content .main_index .extend li a.download_button{
+		display:block;
+		width:76px;
+		height:23px;
+		background:url("http://dl.pinyin.sogou.com/index/2.0/down_ex_func.png") no-repeat;
+		margin:10px 7px 0 7px;
+	}
+	/*扩展部分样式 结束*/
+	/*词库部分样式  开始*/
+	.content .main_index .dicitionary .title_c{
+		width:734px;
+		height:29px;
+		background:url('http://dl.pinyin.sogou.com/index/2.0/dict_show_title.png') no-repeat;
+		margin:23px 0 8px;
+	}
+	.content .main_index .dicitionary .info_c{
+		display:block;
+		margin:8px 0 0 22px;
+	}
+	.content .main_index .dicitionary .info_c:hover{
+		color:#ff8049;
+	}
+	/*词库部分样式  结束*/
+	/*侧边栏样式  开始*/
+	.content .sidebar {
+        width: 266px;
+        height: 892px;
+        float: right;
+	}
+	.content .sidebar .skinPic a{
+		width: 266px;
+        height: 288px;
+        float: left;
+        margin: 13px 0 12px 0;
+        background: url(http://dl.pinyin.sogou.com/index/2.0/index_sidebanner_author_center.jpg) no-repeat;
+	}
+	.content .sidebar .title_d{
+		width: 266px;
+        height: 29px;
+        float: left;
+        background: url(http://dl.pinyin.sogou.com/index/2.0/new_activity.png) no-repeat;
+	}
+	.content .sidebar .actioity li{
+		padding: 6px 0 0 14px;
+        margin: 0px 0 0 -34px;
+        width: 266px;
+        height: 33px;
+        float: left;
+        background: url(http://dl.pinyin.sogou.com/index/2.0/activity_bg.png) no-repeat;
+	}
+	.content .sidebar .actioity li #important{
+		color:#FF0000;
+	}
+	.content .sidebar .actioity li #important:hover{
+		color:#ff8049;
+	}
+	.content .sidebar .actioity li a:hover{
+		color:#ff8049;
+	}
+	.content .sidebar .focus_us{
+        width: 266px;
+        height: 169px;
+        background: url(http://dl.pinyin.sogou.com/index/2.0/focus_ewn.png) no-repeat;
+        position:relative;
+	}
+	.content .sidebar .focus_us #weibo a{
+		position: absolute;
+        width: 107px;
+        height: 25px;
+        top: 62px;
+        right: 13px;
+	}
+	.content .sidebar .focus_us #kefu a{
+		position: absolute;
+        width: 107px;
+        height: 25px;
+        top: 103px;
+        right: 13px;
+	}
+	.content .sidebar .download_list{
+		width: 265px;
+        height: 182px;
+        float: left;
+        margin-top: 16px;
+        background: url(http://dl.pinyin.sogou.com/index/2.0/download_list.2.5.2.jpg) -0px 0px no-repeat;
+	}
+	.content .sidebar .download_list ul{
+		padding:0;
+	}
+	.content .sidebar .download_list li{
+		height: 60px;
+        position: relative;
+	}
+	.content .sidebar .download_list li a{
+		position:absolute;
+		width:73px;
+		height:26px;
+		top:7px;
+		right:13px;
+	}
+	.content .sidebar .download_list li a:hover{
+		background:url("http://dl.pinyin.sogou.com/index/2.0/download_list_hover.png");
+	}
+	/*侧边栏样式  结束*/
+	/*底部样式  开始*/
+	.footer{
+        width:100%;
+        height:180px;
+        background-color:#f5f5f5;
+        text-align:center;
+        margin-top:55px;
+    }
+    .footer{
+        color:#666666;
+    } 
+    .footer a{
+        color:#666666;
+        text-decoration:none;
+    }
+    .hangyi{
+        padding:60px 0 30px 0;
+        color:#64696f;
+    }
+    .footer .hangyi .lcon{
+        width:18px;
+        height:12.5px;
+        background:url("http://dl.pinyin.sogou.com/index/skin_icon.png") ;
+        display:inline-block;
+    }
+    .footer .extension{
+        font-size:13px;
+    }
+    .footer .copyright{
+        font-size:13px;
+        margin-top:10px;
+    }
+    .footer .extension a:hover{
+        text-decoration:underline;
+    }
+    .footer .copyright a:hover{
+        text-decoration:underline;
+    }
+	/*底部样式  结束*/
+	</style>
+</head>
+<body>
+	<!-- 头部  开始 -->
+    <div class="top clearfix">
+        <div class="logo">
+            <a href="http://pinyin.sogou.com/">
+            <img src="http://dl.pinyin.sogou.com/index/header/logo.png" alt="">
+            </a>
+        </div>
+        <div class="search">
+            <form action="">
+                <input type="text" name="key" id="key">
+                <input type="submit" id="ben" value="搜索">
+            </form>
+        </div>
+    </div>
+    <!-- 头部  结束 -->
+    <!-- 导航菜单  开始 -->
+    <div class="menuH">
+        <ul class="menu cleafix">
+            <li class="SC"><a href="">首页</a></li>
+            <li><a href="">皮肤</a></li>
+            <li><a href="">词库</a></li>
+            <li class="new"><a href="">字媒体</a></li>
+            <li><a href="">帮助</a></li>
+            <li><a href="">升级日志</a></li>
+            <li><a href="">论坛</a></li>
+        </ul>
+    </div>
+    <!-- 导航菜单  结束 -->
+    <!-- 头部图  开始 -->
+    <div class="bennerContainer clearfix">
+        <div class="benner">
+        <div class="date">更新日期 ：2016-05-12</div>
+        <div class="version">
+            <a href="http://pinyin.sogou.com/features8.0.1/">新版特性</a>
+        </div>
+        <div class="support">支持：XP / WIN7 / WIN8 / WIN10</div>
+        <div class="download">
+            <a href="http://cdn2.ime.sogou.com/a9a9e619c58a270cd2d06abe2ea071a1/573f19dc/dl/index/1463120496/sogou_pinyin_80d.exe"></a>
+        </div>
+        <div class="qrcode"></div>
+        <div class="moliedownload">
+        	<a href="http://shouji.sogou.com/sapp/media/?site=20150212website"></a>
+        </div>
+    </div>
+    <!-- 头部图  结束 -->
+	<!-- 中间内容  开始 -->
+    <div class="content clearfix">
+	    <div class="main_index clearfix">
+	 <!-- 皮肤部分  开始 -->
+	        <div class="skin">
+		        <div class="title_a"></div>
+			    <ul class="clearfix">
+				    <li>
+					    <div class="img">
+						    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_pic_4">
+							    <img src="http://dl.pinyin.sogou.com/cache/skins/uploadImage/2016/05/27/14643214727979_former.jpg" alt="">
+						    </a>
+					    </div>
+					    <div class="info">
+						    <div class="skin_content">
+							    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_txt_4">【梦圆】哆啦A梦变身葫芦娃</a>
+						    </div>
+						    <div class="skin_download">
+							    <a href="http://download.pinyin.sogou.com/skins/download.php?skin_id=525428&f=idxb1&f=indexfirst&_rf=pyindex_dl_4"></a>
+						    </div>
+					    </div>
+				    </li>
+				    <li>
+					    <div class="img">
+						    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_pic_4">
+							    <img src="http://dl.pinyin.sogou.com/cache/skins/uploadImage/2016/05/27/14643214727979_former.jpg" alt="">
+						    </a>
+					    </div>
+					    <div class="info">
+						    <div class="skin_content">
+							    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_txt_4">【梦圆】哆啦A梦变身葫芦娃</a>
+						    </div>
+						    <div class="skin_download">
+							    <a href="http://download.pinyin.sogou.com/skins/download.php?skin_id=525428&f=idxb1&f=indexfirst&_rf=pyindex_dl_4"></a>
+						    </div>
+					    </div>
+				    </li>
+				    <li>
+					    <div class="img">
+						    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_pic_4">
+							    <img src="http://dl.pinyin.sogou.com/cache/skins/uploadImage/2016/05/27/14643214727979_former.jpg" alt="">
+						    </a>
+					    </div>
+					    <div class="info">
+						    <div class="skin_content">
+							    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_txt_4">【梦圆】哆啦A梦变身葫芦娃</a>
+						    </div>
+						    <div class="skin_download">
+							    <a href="http://download.pinyin.sogou.com/skins/download.php?skin_id=525428&f=idxb1&f=indexfirst&_rf=pyindex_dl_4"></a>
+						    </div>
+					    </div>
+				    </li>
+				    <li>
+					    <div class="img">
+						    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_pic_4">
+							    <img src="http://dl.pinyin.sogou.com/cache/skins/uploadImage/2016/05/27/14643214727979_former.jpg" alt="">
+						    </a>
+					    </div>
+					    <div class="info">
+						    <div class="skin_content">
+							    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_txt_4">【梦圆】哆啦A梦变身葫芦娃</a>
+						    </div>
+						    <div class="skin_download">
+							    <a href="http://download.pinyin.sogou.com/skins/download.php?skin_id=525428&f=idxb1&f=indexfirst&_rf=pyindex_dl_4"></a>
+						    </div>
+					    </div>
+				    </li>
+				    <li>
+					    <div class="img">
+						    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_pic_4">
+							    <img src="http://dl.pinyin.sogou.com/cache/skins/uploadImage/2016/05/27/14643214727979_former.jpg" alt="">
+						    </a>
+					    </div>
+					    <div class="info">
+						    <div class="skin_content">
+							    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_txt_4">【梦圆】哆啦A梦变身葫芦娃</a>
+						    </div>
+						    <div class="skin_download">
+							    <a href="http://download.pinyin.sogou.com/skins/download.php?skin_id=525428&f=idxb1&f=indexfirst&_rf=pyindex_dl_4"></a>
+						    </div>
+					    </div>
+				    </li>
+				    <li>
+					    <div class="img">
+						    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_pic_4">
+							    <img src="http://dl.pinyin.sogou.com/cache/skins/uploadImage/2016/05/27/14643214727979_former.jpg" alt="">
+						    </a>
+					   </div>
+					    <div class="info">
+						    <div class="skin_content">
+							    <a href="http://pinyin.sogou.com/skins/detail/view/info/525428?rf=pyindex_txt_4">【梦圆】哆啦A梦变身葫芦娃</a>
+						   </div>
+						    <div class="skin_download">
+							    <a href="http://download.pinyin.sogou.com/skins/download.php?skin_id=525428&f=idxb1&f=indexfirst&_rf=pyindex_dl_4"></a>
+						    </div>
+					    </div>
+				    </li>
+			    </ul>
+	        </div>
+	 <!-- 皮肤部分  结束 -->
+	 <!-- 扩展部分  开始 -->
+	        <div class="extend clearfix">
+	            <div class="title_b"></div>
+		        <ul class="clearfix">
+			        <li>
+				        <a href="#">
+					        <img src="http://dl.pinyin.sogou.com/index/2.0/ex/id_1.png" alt="">
+				        </a>
+				        <a class="download_button" href="#"></a>
+			        </li>
+			        <li>
+				        <a href="#">
+					        <img src="http://dl.pinyin.sogou.com/index/2.0/ex/id_1.png" alt="">
+				        </a>
+				        <a class="download_button" href="#"></a>
+			        </li>
+			        <li>
+				        <a href="#">
+					        <img src="http://dl.pinyin.sogou.com/index/2.0/ex/id_1.png" alt="">
+				        </a>
+				        <a class="download_button" href="#"></a>
+			        </li>
+			        <li>
+				        <a href="#">
+					        <img src="http://dl.pinyin.sogou.com/index/2.0/ex/id_1.png" alt="">
+				        </a>
+				        <a class="download_button" href="#"></a>
+			        </li>
+			        <li>
+				        <a href="#">
+					        <img src="http://dl.pinyin.sogou.com/index/2.0/ex/id_1.png" alt="">
+				        </a>
+				        <a class="download_button" href="#"></a>
+			        </li>
+			        <li>
+				        <a href="#">
+					        <img src="http://dl.pinyin.sogou.com/index/2.0/ex/id_1.png" alt="">
+				        </a>
+				        <a class="download_button" href="#"></a>
+			        </li>
+		        </ul>
+		    </div>
+	 <!-- 扩展部分  结束 -->
+	 <!-- 词库部分  开始 -->
+	        <div class="dicitionary">
+	        	<div class="title_c"></div>
+	        	<ul class="clearfix">
+	        		<li><a class="img_c" href="#"><img src="http://dl.pinyin.sogou.com/index/2.0/dict/list_1.png" alt=""></a>
+	        			<a class="info_c" href="#">网络流行</a>
+	        		</li>
+	        		<li><a class="img_c" href="#"><img src="http://dl.pinyin.sogou.com/index/2.0/dict/list_1.png" alt=""></a>
+	        			<a class="info_c" href="#">网络流行</a>
+	        		</li>
+	        		<li><a class="img_c" href="#"><img src="http://dl.pinyin.sogou.com/index/2.0/dict/list_1.png" alt=""></a>
+	        			<a class="info_c" href="#">网络流行</a>
+	        		</li>
+	        		<li><a class="img_c" href="#"><img src="http://dl.pinyin.sogou.com/index/2.0/dict/list_1.png" alt=""></a>
+	        			<a class="info_c" href="#">网络流行</a>
+	        		</li>
+	        		<li><a class="img_c" href="#"><img src="http://dl.pinyin.sogou.com/index/2.0/dict/list_1.png" alt=""></a>
+	        			<a class="info_c" href="#">网络流行</a>
+	        		</li>
+	        		<li><a class="img_c" href="#"><img src="http://dl.pinyin.sogou.com/index/2.0/dict/list_1.png" alt=""></a>
+	        			<a class="info_c" href="#">网络流行</a>
+	        		</li>
+	        	</ul>
+	        </div> 
+	 <!-- 词库部分  结束 -->
+	    </div>
+	 <!--侧边栏部分  开始 -->
+	    <div class="sidebar">
+	        <div class="skinPic">
+	    		<a href="#"></a>
+	    	</div>
+	    	<div class="actioity">
+	    		<div class="title_d"></div>
+	    		<ul class="clearfix">
+	    			<li><a id="important" href="">搜狗输入法Linux版全新发布！</a></li>
+	    			<li><a href="">搜狗输入法Linux版全新发布！</a></li>
+	    			<li><a id="important" href="">搜狗输入法Linux版全新发布！</a></li>
+	    			<li><a href="">搜狗输入法Linux版全新发布！</a></li>
+	    		</ul>
+	    	</div>
+	    	<div class="focus_us">
+	    		<div id="weibo">
+	    			<a href="#"></a>
+	    		</div>
+	    		<div id="kefu">
+	    			<a href="#"></a>
+	    		</div>
+	    	</div>
+	    	<div class="download_list">
+	    		<ul>
+	    			<li><a href="#"></a></li>
+	    			<li><a href="#"></a></li>
+	    			<li><a href="#"></a></li>
+	    		</ul>
+	    	</div>
+	    </div>
+	 <!--侧边栏部分  结束 -->
+	</div>
+	<!-- 中间内容  结束 -->
+	<!--底部 开始-->
+    <div class="footer">
+        <div class="hangyi">
+            <div class="lcon"></div>
+            <span class="email">
+               皮肤、表情、词库合作  邮箱：<a href="http://pinyin.sogou.com/mailto:ImePOM-stickers@sogou-inc.com">ImePOM-stickers@sogou-inc.com</a>
+            </span>
+        </div>
+        <div class="hanger">
+            <div class="extension">
+                <a href="">网站地图</a>-
+                <a href="">企业推广</a>-
+                <a href="">拼音输入法</a>-
+                <a href="">搜狗浏览器</a>-
+                <a href="">诚聘英才</a>
+            </div>
+            <div class="copyright">
+                © 2016 SOGOU.COM 
+                <a href="http://www.miibeian.gov.cn/">京ICP证050897号</a>
+                <a href="http://www.sogou.com/docs/terms.htm">免责声明</a>
+            </div>
+        </div>
+    </div>
+    <!--底部 结束-->
+</body>
+</html>

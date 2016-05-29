@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .clearfix::after{
+      content:"";
+      width:0;
+      height:0;
+      font-size:0;
+      display:block;
+      clear:both;
+    }
+     body{
+     margin:0px;
+    } 
+    .top{
+      width:1000px;
+      margin:8px auto -4px;
+      position:relative;
+    }
+    .top .logo{
+      width:193px;
+      height:40px;
+      /*background:url('http://dl.pinyin.sogou.com/index/header/logo.png');*/
+      float:left;
+    }
+    .top .search{
+      width:325px;
+      height:32px;
+      /*background:url('http://dl.pinyin.sogou.com/index/header/search_box.png');*/
+      float:right;
+    }
+    .top .search #key{
+      width:293px;
+      height:25.5px;
+      border:1px solid #E1E1E1;
+      outline:none;
+      text-indent:10px;
+      float:left;
+    }
+    .top .search #key:focus{
+      border:1px solid #FC6B2D;
+    }
+    .top .search #ben{
+      float:left;
+      width:30px;
+      height:30px;
+      text-indent:-100px;
+      border:none;
+      outline:none;
+      background:url("http://dl.pinyin.sogou.com/index/header/search_box.png");
+      background-position:-295px 0;
+      margin-left:-2px;
+    }
+    .menuH{
+      width:100%;
+      height:40px;
+      background-color:#FC6B2D;
+    } 
+    .menu{
+      width:1000px;
+      margin:20px auto;
+    } 
+    .menu li{
+      float:left;
+      list-style-type:none;
+      padding:9px 33px;
+      margin:0 50px 0 -18px;
+      position:relative; 
+      
+    }
+    .menu li.SC,.menu li:hover{
+      background-color: #E94F0D;
+    }
+    .menu li a{
+      color:#fff;
+      text-decoration:none;
+      font-size:18px;
+    }
+    .menu li.new::after{
+      content:"";
+      width:26px;
+      height:14px;
+      background:url("http://dl.pinyin.sogou.com/index/2.0/new.png");
+      position:absolute;
+      top:-16px;
+      left:60px;
+    } 
+    .bennerContainer .benner{
+      height:400px;
+      background: url('http://dl.pinyin.sogou.com/index/2.0/banner_8.0.2.jpg') center;
+    }
+    .bennerContainer .btn{
+      width:241px;
+      height:60px;
+      display:inline-block;
+      background:url('http://dl.pinyin.sogou.com/index/2.0/btn_down_one_8.0.1.png');
+      position:absolute;
+      right:320px;
+      top:360px;
+    }
+  </style>
+</head>
+<body>
+  <div class="top clearfix">
+    <div class="logo">
+      <a href="http://pinyin.sogou.com/">
+        <img src="http://dl.pinyin.sogou.com/index/header/logo.png" alt="">
+      </a>
+    </div>
+    <div class="search">
+      <form action="">
+      <input type="text" name="key" id="key">
+      <input type="submit" id="ben" value="搜索">
+      </form>
+    </div>
+  </div>
+  <div class="menuH">
+    <ul class="menu cleafix">
+      <li class="SC"><a href="">首页</a></li>
+      <li><a href="">皮肤</a></li>
+      <li><a href="">词库</a></li>
+      <li class="new"><a href="">字媒体</a></li>
+      <li><a href="">帮助</a></li>
+      <li><a href="">升级日志</a></li>
+      <li><a href="">论坛</a></li>
+    </ul>
+  </div>
+  <div class="bennerContainer clearfix">
+    <div class="benner">
+      
+    <div class="btn"></div>
+  </div>
+  </div>
+</body>
+</html>
