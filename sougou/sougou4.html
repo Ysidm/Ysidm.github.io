@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>sougou3</title>
+	<title>sougou4</title>
 	<style>
 	/*公共类  开始*/
 	.clearfix::after{
@@ -28,10 +28,11 @@
 		font-size:75%;
 		font-family:Tahoma, Arial;
 	}
-	/*公共类  结尾*/
 	body{
-		margin:0px;
+		padding:0;
+		margin:0;
 	}
+	/*公共类  结尾*/
 	/*头部样式  开始*/
 	.top{
         width:1000px;
@@ -107,11 +108,14 @@
     } 
 	/*导航菜单样式  结束*/
 	/*头部图样式  开始*/
+	.bennerContainer{
+		background: url('http://dl.pinyin.sogou.com/index/2.0/banner_8.0.2.jpg') center;
+	}
 	.bennerContainer .benner{
         width:1000px;
         height:400px;
         margin:0 auto;
-        background: url('http://dl.pinyin.sogou.com/index/2.0/banner_8.0.2.jpg') center;
+        
         position:relative;
     }
     .bennerContainer .benner .date{
@@ -397,17 +401,18 @@
     <!-- 头部图  开始 -->
     <div class="bennerContainer clearfix">
         <div class="benner">
-        <div class="date">更新日期 ：2016-05-12</div>
-        <div class="version">
-            <a href="http://pinyin.sogou.com/features8.0.1/">新版特性</a>
-        </div>
-        <div class="support">支持：XP / WIN7 / WIN8 / WIN10</div>
-        <div class="download">
-            <a href="http://cdn2.ime.sogou.com/a9a9e619c58a270cd2d06abe2ea071a1/573f19dc/dl/index/1463120496/sogou_pinyin_80d.exe"></a>
-        </div>
-        <div class="qrcode"></div>
-        <div class="moliedownload">
-        	<a href="http://shouji.sogou.com/sapp/media/?site=20150212website"></a>
+            <div class="date">更新日期 ：2016-05-12</div>
+            <div class="version">
+                <a href="http://pinyin.sogou.com/features8.0.1/">新版特性</a>
+            </div>
+            <div class="support">支持：XP / WIN7 / WIN8 / WIN10</div>
+            <div class="download">
+                <a href="http://cdn2.ime.sogou.com/a9a9e619c58a270cd2d06abe2ea071a1/573f19dc/dl/index/1463120496/sogou_pinyin_80d.exe"></a>
+            </div>
+            <div class="qrcode"></div>
+            <div class="moliedownload">
+        	    <a href="http://shouji.sogou.com/sapp/media/?site=20150212website"></a>
+            </div>
         </div>
     </div>
     <!-- 头部图  结束 -->
