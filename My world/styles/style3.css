@@ -1,0 +1,73 @@
+.clearfix::after{
+	content:"";
+	width:0;
+	height:0;
+	display:block;
+	font-size:0;
+	clear:both;
+}
+body{
+/*	width:1000px;*/
+	height:2000px;
+	background: radial-gradient(circle,#f9fcff 10%,#e2eff7 50%,#b1d4e7 100%);
+}
+img{
+	width:300px;
+	height:300px;
+}
+.zhou{
+	margin:80px 0 0 30px;
+	/*width:500px;图片竖着的时候用
+	height:1000px;*/
+}
+.hover-text{
+	/*display:none;*/
+	color:#999;/*让下面的字稍微好看点*/
+	width:60%;
+	margin:0 auto;
+	text-align: center;
+	line-height: 1.4;
+	font-size:18px;
+	opacity:0;
+	transition:opacity 1s;
+	-webkit-transition:opacity 1s;/*这些不能偷懒啊*/
+	-moz--webkit-transition:opacity 1s;
+}
+.kuang:hover p{
+	/*display:block;*/
+	opacity:1;
+}
+.kuang{
+    width:1250px;
+    margin:80px 0;
+    padding:10px 10px 20px 10px;
+    border:1px solid #BFBFBF;
+    background-color:white;
+    box-shadow:2px 2px 3px #aaaaaa;
+}
+.renshiziran .zhou .donghua{
+	/*float:left;*/
+    -moz-transform:rotate(6deg); /* Firefox */
+    -webkit-transform:rotate(6deg); /* Safari and Chrome */
+    transform:rotate(6deg);
+}
+.renshiziran .zhou .donghua2{
+	/*float:left;*/
+    -moz-transform:rotate(-6deg); /* Firefox */
+    -webkit-transform:rotate(-6deg); /* Safari and Chrome */
+    transform:rotate(-6deg);
+}
+li{/*加了一个li   注意：nth-child 只能在兄弟元素有且只有一种的情况下试用 所以在外面加个li或者div之类的  不然会有问题*/
+	list-style: none;
+}
+h2{/*为了让h2好看一点*/
+      font-size:50px; 
+      color:#999999;
+      padding-right:70px;
+	  padding-left:20px;
+}
+li:nth-child(2n+1) h2{
+	text-align: right;
+}
+
+

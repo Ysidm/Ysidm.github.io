@@ -1,0 +1,173 @@
+/*公共类  开始*/
+body{
+	width:1000px;
+	height:600px;
+	background: radial-gradient(circle,#f9fcff 10%,#e2eff7 50%,#b1d4e7 100%);
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+/*.nav-s{多余的   出现滚动条了
+	width:1000px;
+	height:600px;
+}*/
+.nav-s .shape{
+	width:320px;
+	height:320px;
+	margin:-160px 0 0 -160px;
+	overflow:hidden;
+}
+.nav-s a{
+	position:absolute;
+	top:50%;
+	left:50%;
+	color:#fff;
+}
+.nav-s .cont{
+	width:226px;
+	height:226px;
+	margin:77px 0 0 85px;
+	transform: rotate(-45deg) translate3d(0,0,0);
+	-webkit-transform: rotate(-45deg) translate3d(0,0,0);
+	text-align:center;
+}
+.nav-s .title{
+	font-family:arial;
+	font-size:36px;
+	padding:0 0 25px 0;
+}
+.nav-s .btn{
+	display:inline-block;
+	width:180px;
+	height:56px;
+	border:1px solid #fff;
+	line-height:56px;
+	font-size:24px;
+}
+.nav-s .shape .bg{
+	position:absolute;
+	width:452px;
+	height:452px;
+	top:-2px;/*z注意这个bg的位置*/
+	left:-3px;
+	opacity:0;
+	transform: rotate(-45deg) translate(0,-90px);
+	-webkit-transform: rotate(-45deg) translate(0px,-90px);/*兼容谷歌*/
+	-moz-transform: rotate(-45deg) translate(0px,-90px);/*兼容火狐  下面自行加上*/
+	-webkit-transition: all 1s ease-in-out;/*hover的时候渐渐显示的动画*/
+	-moz-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+/*公共类 结束*/
+.nav-s .me{
+	background:  #DA70D6;
+	transform: rotate(45deg) translate(-80px,-80px);
+	-webkit-transform: rotate(45deg) translate(-80px,-80px);
+}
+.nav-s .natural{
+	background: #32CD32;
+	transform: rotate(45deg) translate(241px,-80px);
+	-webkit-transform: rotate(45deg) translate(241px,-80px);
+}
+.nav-s .anime{
+	background: #ED9121;
+	transform: rotate(45deg) translate(-80px,241px);
+	-webkit-transform: rotate(45deg) translate(-80px,241px);
+}
+.nav-s .bbs{
+	width:150px;
+	height:150px;
+	background: #33A1C9;
+	margin: -69px 0 0 -75px;
+	transform: rotate(45deg) translate(-321px,0);
+	-webkit-transform: rotate(45deg) translate(-321px,0);
+}
+.nav-s .cont2{
+	width:100px;
+	height:30px;
+	margin:60px 0 0 20px;
+    transform: rotate(-45deg) translate3d(0,0,0);
+    -webkit-transform: rotate(-45deg) translate3d(0,0,0);
+}
+.me:hover .bg{/*鼠标hover的时候bg透明度变化*/
+	opacity:.7; 
+	margin-top:-8px;
+	z-index:-1;
+}
+.natural:hover .bg{
+	opacity:.7;
+	margin-top:-8px;
+	z-index:-1;
+}
+.anime:hover .bg{
+	opacity:.7;
+	margin-top:-8px;
+	z-index:-1;
+}
+.nav-s .me .bg{
+	background:url(../images/me.jpeg) no-repeat;/*注意图片路径*/
+}
+.nav-s .natural .bg{
+	background:url(../images/ziran.png) no-repeat;
+}
+.nav-s .anime .bg{
+	background:url(../images/dongman.jpg) no-repeat;
+}
+
+/*边框*/
+.nav-s a .border{
+	background:#fff;
+	position:absolute;
+	-webkit-transition: all 1s  linear;/*hover的时候渐渐显示的动画*/
+	-moz-transition: all 1s linear;
+	transition: all 1s linear;
+}
+.border-r{
+	top:20px;
+	left:20px;
+	width:0px;
+	height:1px;
+}
+.border-l{
+	bottom:20px;
+	right:20px;
+	width:0px;
+	height:1px;
+}
+.border-t{
+	top:20px;
+	right:20px;
+	width:1px;
+	height:0px;
+}
+.border-d{
+	bottom:20px;
+	left:20px;
+	width:1px;
+	height:0px;
+}
+a:hover .border-t,a:hover .border-d{
+	width:1px;
+	height:280px;
+}
+a:hover .border-r,a:hover .border-l{
+	width:280px;
+	height:1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
